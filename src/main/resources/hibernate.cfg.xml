@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--配置  数据库  驱动   url   账号   密码-->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql:///springbootdemo</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">12315.qq</property>
+        <!--****************************************************-->
+        <!--mysql方言    dialect-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--是否在控制台显示sql语句-->
+        <property name="show_sql">true</property>
+        <!--格式化sql语句-->
+        <property name="format_sql">true</property>
+        <!--事务管理方式   每一个线程  控制一个事务-->
+        <property name="current_session_context_class">thread</property>
+        <!--hibernate 管理表的方式-->
+        <property name="hbm2ddl.auto">update</property>
+        <!--注册映射文件-->
+        <mapping class="com.yyh.po.Student"/>
+    </session-factory>
+</hibernate-configuration>
